@@ -1,0 +1,7 @@
+.terraform/
+*.zip
+*.tar.gz
+*.exe
+*.bin
+*.iso
+.terraform.lock.hcl
