@@ -1,12 +1,4 @@
 terraform {
-  cloud {
-    organization = "fercanap"
-
-    workspaces {
-      name = "aws-final-lab"
-    }
-  }
-
   required_providers {
     aws = {
       source  = "hashicorp/aws"

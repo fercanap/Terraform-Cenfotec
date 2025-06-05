@@ -1,0 +1,12 @@
+{
+    "KeyPairs": [
+        {
+            "KeyPairId": "key-0656f4d1a2c34eba3",
+            "KeyType": "rsa",
+            "Tags": [],
+            "CreateTime": "2025-06-05T05:28:07.543000+00:00",
+            "KeyName": "fercanap-key",
+            "KeyFingerprint": "62:89:2f:a1:7b:be:a5:5c:66:f2:e7:a3:07:60:48:a9"
+        }
+    ]
+}

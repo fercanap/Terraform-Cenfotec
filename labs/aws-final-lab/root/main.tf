@@ -41,3 +41,13 @@ module "loadbalancer" {
   sg_public_id      = module.securityGroups.sg_public.id
   lab_name          = var.lab_name
 }
+
+module "autoscalingGroups" {
+  source            = "../autoscalingGroups"
+  ami_id            = data.aws_ami.ubuntu.id
+  subnet_ids        = [module.network.private_subnet.id]
+  asg_sg_id         = module.securityGroups.sg_private.id
+  key_name          = aws_key_pair.ec2_key.key_name
+  lab_name          = var.lab_name
+  target_group_arn  = module.loadbalancer.web_tg_arn
+}
