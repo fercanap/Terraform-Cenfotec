@@ -24,16 +24,7 @@
 
 --- KEY PAIRS ---
 {
-    "KeyPairs": [
-        {
-            "KeyPairId": "key-0b4f6042dd604b5e3",
-            "KeyType": "rsa",
-            "Tags": [],
-            "CreateTime": "2025-06-05T17:01:42.633000+00:00",
-            "KeyName": "fercanap-key-2",
-            "KeyFingerprint": "c6:0b:1c:16:57:85:7f:9d:94:2b:39:8f:ac:5d:00:1c"
-        }
-    ]
+    "KeyPairs": []
 }
 
 --- RUNNING INSTANCES ---
@@ -89,41 +80,6 @@
                             "CidrIp": "0.0.0.0/0"
                         }
                     ],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                }
-            ]
-        },
-        {
-            "GroupId": "sg-0e69de9eeca453d32",
-            "IpPermissionsEgress": [
-                {
-                    "IpProtocol": "-1",
-                    "UserIdGroupPairs": [],
-                    "IpRanges": [
-                        {
-                            "CidrIp": "0.0.0.0/0"
-                        }
-                    ],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                }
-            ],
-            "VpcId": "vpc-0bdf0632bc629a8a6",
-            "SecurityGroupArn": "arn:aws:ec2:us-west-1:367816904393:security-group/sg-0e69de9eeca453d32",
-            "OwnerId": "367816904393",
-            "GroupName": "default",
-            "Description": "default VPC security group",
-            "IpPermissions": [
-                {
-                    "IpProtocol": "-1",
-                    "UserIdGroupPairs": [
-                        {
-                            "UserId": "367816904393",
-                            "GroupId": "sg-0e69de9eeca453d32"
-                        }
-                    ],
-                    "IpRanges": [],
                     "Ipv6Ranges": [],
                     "PrefixListIds": []
                 }
@@ -421,69 +377,6 @@
             ]
         },
         {
-            "GroupId": "sg-0cc295ec8d0a180bb",
-            "IpPermissionsEgress": [
-                {
-                    "IpProtocol": "-1",
-                    "UserIdGroupPairs": [],
-                    "IpRanges": [
-                        {
-                            "CidrIp": "0.0.0.0/0"
-                        }
-                    ],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                }
-            ],
-            "Tags": [
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                },
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Name",
-                    "Value": "public-sg"
-                }
-            ],
-            "VpcId": "vpc-0bdf0632bc629a8a6",
-            "SecurityGroupArn": "arn:aws:ec2:us-west-1:367816904393:security-group/sg-0cc295ec8d0a180bb",
-            "OwnerId": "367816904393",
-            "GroupName": "public-sg",
-            "Description": "Allow HTTP and HTTPS",
-            "IpPermissions": [
-                {
-                    "IpProtocol": "tcp",
-                    "FromPort": 80,
-                    "ToPort": 80,
-                    "UserIdGroupPairs": [],
-                    "IpRanges": [
-                        {
-                            "CidrIp": "0.0.0.0/0"
-                        }
-                    ],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                },
-                {
-                    "IpProtocol": "tcp",
-                    "FromPort": 443,
-                    "ToPort": 443,
-                    "UserIdGroupPairs": [],
-                    "IpRanges": [
-                        {
-                            "CidrIp": "0.0.0.0/0"
-                        }
-                    ],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                }
-            ]
-        },
-        {
             "GroupId": "sg-0e534f626be1b6d8d",
             "IpPermissionsEgress": [
                 {
@@ -541,85 +434,6 @@
                             "CidrIp": "0.0.0.0/0"
                         }
                     ],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                }
-            ]
-        },
-        {
-            "GroupId": "sg-00d2ef8f47ea73898",
-            "IpPermissionsEgress": [
-                {
-                    "IpProtocol": "-1",
-                    "UserIdGroupPairs": [],
-                    "IpRanges": [
-                        {
-                            "CidrIp": "0.0.0.0/0"
-                        }
-                    ],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                }
-            ],
-            "Tags": [
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Name",
-                    "Value": "private-sg"
-                },
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                }
-            ],
-            "VpcId": "vpc-0bdf0632bc629a8a6",
-            "SecurityGroupArn": "arn:aws:ec2:us-west-1:367816904393:security-group/sg-00d2ef8f47ea73898",
-            "OwnerId": "367816904393",
-            "GroupName": "private-sg",
-            "Description": "Allow HTTP/HTTPS from public SG and SSH from bastion",
-            "IpPermissions": [
-                {
-                    "IpProtocol": "tcp",
-                    "FromPort": 80,
-                    "ToPort": 80,
-                    "UserIdGroupPairs": [
-                        {
-                            "UserId": "367816904393",
-                            "GroupId": "sg-0cc295ec8d0a180bb"
-                        }
-                    ],
-                    "IpRanges": [],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                },
-                {
-                    "IpProtocol": "tcp",
-                    "FromPort": 22,
-                    "ToPort": 22,
-                    "UserIdGroupPairs": [
-                        {
-                            "UserId": "367816904393",
-                            "GroupId": "sg-0c2b9a54f03de0ee2"
-                        }
-                    ],
-                    "IpRanges": [],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                },
-                {
-                    "IpProtocol": "tcp",
-                    "FromPort": 443,
-                    "ToPort": 443,
-                    "UserIdGroupPairs": [
-                        {
-                            "UserId": "367816904393",
-                            "GroupId": "sg-0cc295ec8d0a180bb"
-                        }
-                    ],
-                    "IpRanges": [],
                     "Ipv6Ranges": [],
                     "PrefixListIds": []
                 }
@@ -903,56 +717,6 @@
             ]
         },
         {
-            "GroupId": "sg-0c2b9a54f03de0ee2",
-            "IpPermissionsEgress": [
-                {
-                    "IpProtocol": "-1",
-                    "UserIdGroupPairs": [],
-                    "IpRanges": [
-                        {
-                            "CidrIp": "0.0.0.0/0"
-                        }
-                    ],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                }
-            ],
-            "Tags": [
-                {
-                    "Key": "Name",
-                    "Value": "bastion-sg"
-                },
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                }
-            ],
-            "VpcId": "vpc-0bdf0632bc629a8a6",
-            "SecurityGroupArn": "arn:aws:ec2:us-west-1:367816904393:security-group/sg-0c2b9a54f03de0ee2",
-            "OwnerId": "367816904393",
-            "GroupName": "bastion-sg",
-            "Description": "Allow SSH from anywhere",
-            "IpPermissions": [
-                {
-                    "IpProtocol": "tcp",
-                    "FromPort": 22,
-                    "ToPort": 22,
-                    "UserIdGroupPairs": [],
-                    "IpRanges": [
-                        {
-                            "CidrIp": "0.0.0.0/0"
-                        }
-                    ],
-                    "Ipv6Ranges": [],
-                    "PrefixListIds": []
-                }
-            ]
-        },
-        {
             "GroupId": "sg-036517a5784466965",
             "IpPermissionsEgress": [
                 {
@@ -1027,46 +791,6 @@
             "SubnetId": "subnet-01073bed474546021",
             "State": "available",
             "VpcId": "vpc-086e06be627cd1949",
-            "CidrBlock": "10.0.3.0/24",
-            "AvailableIpAddressCount": 251,
-            "AvailabilityZone": "us-west-1b",
-            "DefaultForAz": false,
-            "MapPublicIpOnLaunch": false
-        },
-        {
-            "AvailabilityZoneId": "usw1-az1",
-            "MapCustomerOwnedIpOnLaunch": false,
-            "OwnerId": "367816904393",
-            "AssignIpv6AddressOnCreation": false,
-            "Ipv6CidrBlockAssociationSet": [],
-            "Tags": [
-                {
-                    "Key": "Name",
-                    "Value": "private-subnet-fercanap"
-                },
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                }
-            ],
-            "SubnetArn": "arn:aws:ec2:us-west-1:367816904393:subnet/subnet-0dfe8245bb67f88b4",
-            "EnableDns64": false,
-            "Ipv6Native": false,
-            "PrivateDnsNameOptionsOnLaunch": {
-                "HostnameType": "ip-name",
-                "EnableResourceNameDnsARecord": false,
-                "EnableResourceNameDnsAAAARecord": false
-            },
-            "BlockPublicAccessStates": {
-                "InternetGatewayBlockMode": "off"
-            },
-            "SubnetId": "subnet-0dfe8245bb67f88b4",
-            "State": "available",
-            "VpcId": "vpc-0bdf0632bc629a8a6",
             "CidrBlock": "10.0.3.0/24",
             "AvailableIpAddressCount": 251,
             "AvailabilityZone": "us-west-1b",
@@ -1187,86 +911,6 @@
             "SubnetId": "subnet-0262fc486de6ceef0",
             "State": "available",
             "VpcId": "vpc-086e06be627cd1949",
-            "CidrBlock": "10.0.2.0/24",
-            "AvailableIpAddressCount": 251,
-            "AvailabilityZone": "us-west-1b",
-            "DefaultForAz": false,
-            "MapPublicIpOnLaunch": false
-        },
-        {
-            "AvailabilityZoneId": "usw1-az3",
-            "MapCustomerOwnedIpOnLaunch": false,
-            "OwnerId": "367816904393",
-            "AssignIpv6AddressOnCreation": false,
-            "Ipv6CidrBlockAssociationSet": [],
-            "Tags": [
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Name",
-                    "Value": "public-subnet-a-fercanap"
-                },
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                }
-            ],
-            "SubnetArn": "arn:aws:ec2:us-west-1:367816904393:subnet/subnet-0bc09d9687aabc3a6",
-            "EnableDns64": false,
-            "Ipv6Native": false,
-            "PrivateDnsNameOptionsOnLaunch": {
-                "HostnameType": "ip-name",
-                "EnableResourceNameDnsARecord": false,
-                "EnableResourceNameDnsAAAARecord": false
-            },
-            "BlockPublicAccessStates": {
-                "InternetGatewayBlockMode": "off"
-            },
-            "SubnetId": "subnet-0bc09d9687aabc3a6",
-            "State": "available",
-            "VpcId": "vpc-0bdf0632bc629a8a6",
-            "CidrBlock": "10.0.1.0/24",
-            "AvailableIpAddressCount": 250,
-            "AvailabilityZone": "us-west-1a",
-            "DefaultForAz": false,
-            "MapPublicIpOnLaunch": false
-        },
-        {
-            "AvailabilityZoneId": "usw1-az1",
-            "MapCustomerOwnedIpOnLaunch": false,
-            "OwnerId": "367816904393",
-            "AssignIpv6AddressOnCreation": false,
-            "Ipv6CidrBlockAssociationSet": [],
-            "Tags": [
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Name",
-                    "Value": "public-subnet-b-fercanap"
-                },
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                }
-            ],
-            "SubnetArn": "arn:aws:ec2:us-west-1:367816904393:subnet/subnet-02ca185cb6f7b546d",
-            "EnableDns64": false,
-            "Ipv6Native": false,
-            "PrivateDnsNameOptionsOnLaunch": {
-                "HostnameType": "ip-name",
-                "EnableResourceNameDnsARecord": false,
-                "EnableResourceNameDnsAAAARecord": false
-            },
-            "BlockPublicAccessStates": {
-                "InternetGatewayBlockMode": "off"
-            },
-            "SubnetId": "subnet-02ca185cb6f7b546d",
-            "State": "available",
-            "VpcId": "vpc-0bdf0632bc629a8a6",
             "CidrBlock": "10.0.2.0/24",
             "AvailableIpAddressCount": 251,
             "AvailabilityZone": "us-west-1b",
@@ -1482,6 +1126,31 @@
         {
             "Associations": [
                 {
+                    "Main": true,
+                    "RouteTableAssociationId": "rtbassoc-00c5dac3c1b155b02",
+                    "RouteTableId": "rtb-00c9bcb5aa8290b83",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-00c9bcb5aa8290b83",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.0.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-086e06be627cd1949",
+            "OwnerId": "367816904393"
+        },
+        {
+            "Associations": [
+                {
                     "Main": false,
                     "RouteTableAssociationId": "rtbassoc-0384904f97342ebee",
                     "RouteTableId": "rtb-023756cd320433aff",
@@ -1527,55 +1196,26 @@
         {
             "Associations": [
                 {
-                    "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-05c96325159efbcbc",
-                    "RouteTableId": "rtb-01b1c609ee8cb8f41",
-                    "SubnetId": "subnet-0bc09d9687aabc3a6",
-                    "AssociationState": {
-                        "State": "associated"
-                    }
-                },
-                {
-                    "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-0b6bb7073c5d1b3cc",
-                    "RouteTableId": "rtb-01b1c609ee8cb8f41",
-                    "SubnetId": "subnet-02ca185cb6f7b546d",
+                    "Main": true,
+                    "RouteTableAssociationId": "rtbassoc-0ca97dd3b411bb003",
+                    "RouteTableId": "rtb-0e2a752321cf8d511",
                     "AssociationState": {
                         "State": "associated"
                     }
                 }
             ],
             "PropagatingVgws": [],
-            "RouteTableId": "rtb-01b1c609ee8cb8f41",
+            "RouteTableId": "rtb-0e2a752321cf8d511",
             "Routes": [
                 {
                     "DestinationCidrBlock": "10.0.0.0/16",
                     "GatewayId": "local",
                     "Origin": "CreateRouteTable",
                     "State": "active"
-                },
-                {
-                    "DestinationCidrBlock": "0.0.0.0/0",
-                    "GatewayId": "igw-02484ef816a7a8136",
-                    "Origin": "CreateRoute",
-                    "State": "active"
                 }
             ],
-            "Tags": [
-                {
-                    "Key": "Name",
-                    "Value": "rt-public-fercanap"
-                },
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                }
-            ],
-            "VpcId": "vpc-0bdf0632bc629a8a6",
+            "Tags": [],
+            "VpcId": "vpc-0d3ba670c46631a74",
             "OwnerId": "367816904393"
         },
         {
@@ -1626,19 +1266,44 @@
         {
             "Associations": [
                 {
+                    "Main": true,
+                    "RouteTableAssociationId": "rtbassoc-0d2a1d9e2465f4e93",
+                    "RouteTableId": "rtb-08fe887eb8d735b87",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-08fe887eb8d735b87",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.0.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-0eb8fe3792a3f0511",
+            "OwnerId": "367816904393"
+        },
+        {
+            "Associations": [
+                {
                     "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-02af49988916f0326",
+                    "RouteTableAssociationId": "rtbassoc-0232a16eea846d357",
                     "RouteTableId": "rtb-0b88badf6a0a1f27c",
-                    "SubnetId": "subnet-00421d827283abcfc",
+                    "SubnetId": "subnet-052b01e7f74174ef1",
                     "AssociationState": {
                         "State": "associated"
                     }
                 },
                 {
                     "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-0232a16eea846d357",
+                    "RouteTableAssociationId": "rtbassoc-02af49988916f0326",
                     "RouteTableId": "rtb-0b88badf6a0a1f27c",
-                    "SubnetId": "subnet-052b01e7f74174ef1",
+                    "SubnetId": "subnet-00421d827283abcfc",
                     "AssociationState": {
                         "State": "associated"
                     }
@@ -1675,6 +1340,60 @@
                 }
             ],
             "VpcId": "vpc-0ffa7f493bb81944c",
+            "OwnerId": "367816904393"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-022c19d7f522a1a60",
+                    "RouteTableId": "rtb-03b4d9d8820d10838",
+                    "SubnetId": "subnet-0badb4017b32e111c",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                },
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-073ada546f5e00c5e",
+                    "RouteTableId": "rtb-03b4d9d8820d10838",
+                    "SubnetId": "subnet-0e7c07056441f1f6e",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-03b4d9d8820d10838",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.0.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "GatewayId": "igw-0dc171453ccaf809f",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Owner",
+                    "Value": "fercanap"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "rt-public-fercanap"
+                },
+                {
+                    "Key": "Project",
+                    "Value": "aws-final-lab"
+                }
+            ],
+            "VpcId": "vpc-0d3ba670c46631a74",
             "OwnerId": "367816904393"
         },
         {
@@ -1745,205 +1464,6 @@
                 }
             ],
             "VpcId": "vpc-0ffa7f493bb81944c",
-            "OwnerId": "367816904393"
-        },
-        {
-            "Associations": [
-                {
-                    "Main": true,
-                    "RouteTableAssociationId": "rtbassoc-00c5dac3c1b155b02",
-                    "RouteTableId": "rtb-00c9bcb5aa8290b83",
-                    "AssociationState": {
-                        "State": "associated"
-                    }
-                }
-            ],
-            "PropagatingVgws": [],
-            "RouteTableId": "rtb-00c9bcb5aa8290b83",
-            "Routes": [
-                {
-                    "DestinationCidrBlock": "10.0.0.0/16",
-                    "GatewayId": "local",
-                    "Origin": "CreateRouteTable",
-                    "State": "active"
-                }
-            ],
-            "Tags": [],
-            "VpcId": "vpc-086e06be627cd1949",
-            "OwnerId": "367816904393"
-        },
-        {
-            "Associations": [
-                {
-                    "Main": true,
-                    "RouteTableAssociationId": "rtbassoc-0ca97dd3b411bb003",
-                    "RouteTableId": "rtb-0e2a752321cf8d511",
-                    "AssociationState": {
-                        "State": "associated"
-                    }
-                }
-            ],
-            "PropagatingVgws": [],
-            "RouteTableId": "rtb-0e2a752321cf8d511",
-            "Routes": [
-                {
-                    "DestinationCidrBlock": "10.0.0.0/16",
-                    "GatewayId": "local",
-                    "Origin": "CreateRouteTable",
-                    "State": "active"
-                }
-            ],
-            "Tags": [],
-            "VpcId": "vpc-0d3ba670c46631a74",
-            "OwnerId": "367816904393"
-        },
-        {
-            "Associations": [
-                {
-                    "Main": true,
-                    "RouteTableAssociationId": "rtbassoc-0d2a1d9e2465f4e93",
-                    "RouteTableId": "rtb-08fe887eb8d735b87",
-                    "AssociationState": {
-                        "State": "associated"
-                    }
-                }
-            ],
-            "PropagatingVgws": [],
-            "RouteTableId": "rtb-08fe887eb8d735b87",
-            "Routes": [
-                {
-                    "DestinationCidrBlock": "10.0.0.0/16",
-                    "GatewayId": "local",
-                    "Origin": "CreateRouteTable",
-                    "State": "active"
-                }
-            ],
-            "Tags": [],
-            "VpcId": "vpc-0eb8fe3792a3f0511",
-            "OwnerId": "367816904393"
-        },
-        {
-            "Associations": [
-                {
-                    "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-07291ba240547111a",
-                    "RouteTableId": "rtb-04e550608d8fdb12d",
-                    "SubnetId": "subnet-0dfe8245bb67f88b4",
-                    "AssociationState": {
-                        "State": "associated"
-                    }
-                }
-            ],
-            "PropagatingVgws": [],
-            "RouteTableId": "rtb-04e550608d8fdb12d",
-            "Routes": [
-                {
-                    "DestinationCidrBlock": "10.0.0.0/16",
-                    "GatewayId": "local",
-                    "Origin": "CreateRouteTable",
-                    "State": "active"
-                },
-                {
-                    "DestinationCidrBlock": "0.0.0.0/0",
-                    "NatGatewayId": "nat-02a08afdec68ff97b",
-                    "Origin": "CreateRoute",
-                    "State": "active"
-                }
-            ],
-            "Tags": [
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                },
-                {
-                    "Key": "Name",
-                    "Value": "rt-private-fercanap"
-                },
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                }
-            ],
-            "VpcId": "vpc-0bdf0632bc629a8a6",
-            "OwnerId": "367816904393"
-        },
-        {
-            "Associations": [
-                {
-                    "Main": true,
-                    "RouteTableAssociationId": "rtbassoc-014e0951d331d57b4",
-                    "RouteTableId": "rtb-0fbad6f351ca41042",
-                    "AssociationState": {
-                        "State": "associated"
-                    }
-                }
-            ],
-            "PropagatingVgws": [],
-            "RouteTableId": "rtb-0fbad6f351ca41042",
-            "Routes": [
-                {
-                    "DestinationCidrBlock": "10.0.0.0/16",
-                    "GatewayId": "local",
-                    "Origin": "CreateRouteTable",
-                    "State": "active"
-                }
-            ],
-            "Tags": [],
-            "VpcId": "vpc-0bdf0632bc629a8a6",
-            "OwnerId": "367816904393"
-        },
-        {
-            "Associations": [
-                {
-                    "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-022c19d7f522a1a60",
-                    "RouteTableId": "rtb-03b4d9d8820d10838",
-                    "SubnetId": "subnet-0badb4017b32e111c",
-                    "AssociationState": {
-                        "State": "associated"
-                    }
-                },
-                {
-                    "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-073ada546f5e00c5e",
-                    "RouteTableId": "rtb-03b4d9d8820d10838",
-                    "SubnetId": "subnet-0e7c07056441f1f6e",
-                    "AssociationState": {
-                        "State": "associated"
-                    }
-                }
-            ],
-            "PropagatingVgws": [],
-            "RouteTableId": "rtb-03b4d9d8820d10838",
-            "Routes": [
-                {
-                    "DestinationCidrBlock": "10.0.0.0/16",
-                    "GatewayId": "local",
-                    "Origin": "CreateRouteTable",
-                    "State": "active"
-                },
-                {
-                    "DestinationCidrBlock": "0.0.0.0/0",
-                    "GatewayId": "igw-0dc171453ccaf809f",
-                    "Origin": "CreateRoute",
-                    "State": "active"
-                }
-            ],
-            "Tags": [
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Name",
-                    "Value": "rt-public-fercanap"
-                },
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                }
-            ],
-            "VpcId": "vpc-0d3ba670c46631a74",
             "OwnerId": "367816904393"
         },
         {
@@ -2034,30 +1554,6 @@
             "Attachments": [
                 {
                     "State": "available",
-                    "VpcId": "vpc-0bdf0632bc629a8a6"
-                }
-            ],
-            "InternetGatewayId": "igw-02484ef816a7a8136",
-            "OwnerId": "367816904393",
-            "Tags": [
-                {
-                    "Key": "Name",
-                    "Value": "igw-fercanap"
-                },
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                }
-            ]
-        },
-        {
-            "Attachments": [
-                {
-                    "State": "available",
                     "VpcId": "vpc-086e06be627cd1949"
                 }
             ],
@@ -2110,98 +1606,49 @@
     "NetworkInterfaces": [
         {
             "Association": {
-                "AllocationId": "eipalloc-0c980caed3415bfe2",
-                "AssociationId": "eipassoc-097b88df949210f67",
+                "AllocationId": "eipalloc-0a5ba42cbe6f012d1",
+                "AssociationId": "eipassoc-0056de73b50a96376",
                 "IpOwnerId": "367816904393",
                 "PublicDnsName": "",
-                "PublicIp": "54.219.243.135"
+                "PublicIp": "52.9.251.164"
             },
             "Attachment": {
-                "AttachmentId": "ela-attach-080caf6714c82c44c",
+                "AttachmentId": "ela-attach-0c56083a162345136",
                 "DeleteOnTermination": false,
                 "DeviceIndex": 1,
                 "InstanceOwnerId": "amazon-aws",
                 "Status": "attached"
             },
             "AvailabilityZone": "us-west-1a",
-            "Description": "Interface for NAT Gateway nat-02a08afdec68ff97b",
+            "Description": "Interface for NAT Gateway nat-0fcecf118a34b65d2",
             "Groups": [],
             "InterfaceType": "nat_gateway",
             "Ipv6Addresses": [],
-            "MacAddress": "06:66:e0:bc:28:3b",
-            "NetworkInterfaceId": "eni-0067fdbe74351e7fb",
+            "MacAddress": "06:57:aa:12:97:5d",
+            "NetworkInterfaceId": "eni-0deddca69d5dc37dd",
             "OwnerId": "367816904393",
             "PublicDnsName": "",
-            "PrivateIpAddress": "10.0.1.193",
+            "PrivateIpAddress": "10.0.1.236",
             "PrivateIpAddresses": [
                 {
                     "Association": {
-                        "AllocationId": "eipalloc-0c980caed3415bfe2",
-                        "AssociationId": "eipassoc-097b88df949210f67",
+                        "AllocationId": "eipalloc-0a5ba42cbe6f012d1",
+                        "AssociationId": "eipassoc-0056de73b50a96376",
                         "IpOwnerId": "367816904393",
                         "PublicDnsName": "",
-                        "PublicIp": "54.219.243.135"
+                        "PublicIp": "52.9.251.164"
                     },
                     "Primary": true,
-                    "PrivateIpAddress": "10.0.1.193"
+                    "PrivateIpAddress": "10.0.1.236"
                 }
             ],
             "RequesterId": "044912690849",
             "RequesterManaged": true,
             "SourceDestCheck": false,
             "Status": "in-use",
-            "SubnetId": "subnet-0bc09d9687aabc3a6",
+            "SubnetId": "subnet-052b01e7f74174ef1",
             "TagSet": [],
-            "VpcId": "vpc-0bdf0632bc629a8a6",
-            "Operator": {
-                "Managed": false
-            }
-        },
-        {
-            "Association": {
-                "AllocationId": "eipalloc-01758b3abc03a6229",
-                "AssociationId": "eipassoc-0cdabb0a6465ecbd9",
-                "IpOwnerId": "367816904393",
-                "PublicDnsName": "",
-                "PublicIp": "54.241.149.21"
-            },
-            "Attachment": {
-                "AttachmentId": "ela-attach-04c4203546b89d950",
-                "DeleteOnTermination": false,
-                "DeviceIndex": 1,
-                "InstanceOwnerId": "amazon-aws",
-                "Status": "attached"
-            },
-            "AvailabilityZone": "us-west-1a",
-            "Description": "Interface for NAT Gateway nat-0d3df9ab724fb607e",
-            "Groups": [],
-            "InterfaceType": "nat_gateway",
-            "Ipv6Addresses": [],
-            "MacAddress": "06:b9:8e:e5:28:a9",
-            "NetworkInterfaceId": "eni-0b914c5946479979e",
-            "OwnerId": "367816904393",
-            "PublicDnsName": "",
-            "PrivateIpAddress": "10.0.1.167",
-            "PrivateIpAddresses": [
-                {
-                    "Association": {
-                        "AllocationId": "eipalloc-01758b3abc03a6229",
-                        "AssociationId": "eipassoc-0cdabb0a6465ecbd9",
-                        "IpOwnerId": "367816904393",
-                        "PublicDnsName": "",
-                        "PublicIp": "54.241.149.21"
-                    },
-                    "Primary": true,
-                    "PrivateIpAddress": "10.0.1.167"
-                }
-            ],
-            "RequesterId": "044912690849",
-            "RequesterManaged": true,
-            "SourceDestCheck": false,
-            "Status": "in-use",
-            "SubnetId": "subnet-0e7c07056441f1f6e",
-            "TagSet": [],
-            "VpcId": "vpc-0d3ba670c46631a74",
+            "VpcId": "vpc-0ffa7f493bb81944c",
             "Operator": {
                 "Managed": false
             }
@@ -2257,49 +1704,49 @@
         },
         {
             "Association": {
-                "AllocationId": "eipalloc-0a5ba42cbe6f012d1",
-                "AssociationId": "eipassoc-0056de73b50a96376",
+                "AllocationId": "eipalloc-01758b3abc03a6229",
+                "AssociationId": "eipassoc-0cdabb0a6465ecbd9",
                 "IpOwnerId": "367816904393",
                 "PublicDnsName": "",
-                "PublicIp": "52.9.251.164"
+                "PublicIp": "54.241.149.21"
             },
             "Attachment": {
-                "AttachmentId": "ela-attach-0c56083a162345136",
+                "AttachmentId": "ela-attach-04c4203546b89d950",
                 "DeleteOnTermination": false,
                 "DeviceIndex": 1,
                 "InstanceOwnerId": "amazon-aws",
                 "Status": "attached"
             },
             "AvailabilityZone": "us-west-1a",
-            "Description": "Interface for NAT Gateway nat-0fcecf118a34b65d2",
+            "Description": "Interface for NAT Gateway nat-0d3df9ab724fb607e",
             "Groups": [],
             "InterfaceType": "nat_gateway",
             "Ipv6Addresses": [],
-            "MacAddress": "06:57:aa:12:97:5d",
-            "NetworkInterfaceId": "eni-0deddca69d5dc37dd",
+            "MacAddress": "06:b9:8e:e5:28:a9",
+            "NetworkInterfaceId": "eni-0b914c5946479979e",
             "OwnerId": "367816904393",
             "PublicDnsName": "",
-            "PrivateIpAddress": "10.0.1.236",
+            "PrivateIpAddress": "10.0.1.167",
             "PrivateIpAddresses": [
                 {
                     "Association": {
-                        "AllocationId": "eipalloc-0a5ba42cbe6f012d1",
-                        "AssociationId": "eipassoc-0056de73b50a96376",
+                        "AllocationId": "eipalloc-01758b3abc03a6229",
+                        "AssociationId": "eipassoc-0cdabb0a6465ecbd9",
                         "IpOwnerId": "367816904393",
                         "PublicDnsName": "",
-                        "PublicIp": "52.9.251.164"
+                        "PublicIp": "54.241.149.21"
                     },
                     "Primary": true,
-                    "PrivateIpAddress": "10.0.1.236"
+                    "PrivateIpAddress": "10.0.1.167"
                 }
             ],
             "RequesterId": "044912690849",
             "RequesterManaged": true,
             "SourceDestCheck": false,
             "Status": "in-use",
-            "SubnetId": "subnet-052b01e7f74174ef1",
+            "SubnetId": "subnet-0e7c07056441f1f6e",
             "TagSet": [],
-            "VpcId": "vpc-0ffa7f493bb81944c",
+            "VpcId": "vpc-0d3ba670c46631a74",
             "Operator": {
                 "Managed": false
             }
@@ -2376,41 +1823,6 @@
                 "InternetGatewayBlockMode": "off"
             },
             "VpcId": "vpc-0ffa7f493bb81944c",
-            "State": "available",
-            "CidrBlock": "10.0.0.0/16",
-            "DhcpOptionsId": "dopt-039abb22ec8aabf8b"
-        },
-        {
-            "OwnerId": "367816904393",
-            "InstanceTenancy": "default",
-            "CidrBlockAssociationSet": [
-                {
-                    "AssociationId": "vpc-cidr-assoc-0002373ac0a6bba85",
-                    "CidrBlock": "10.0.0.0/16",
-                    "CidrBlockState": {
-                        "State": "associated"
-                    }
-                }
-            ],
-            "IsDefault": false,
-            "Tags": [
-                {
-                    "Key": "Name",
-                    "Value": "vpc-fercanap"
-                },
-                {
-                    "Key": "Owner",
-                    "Value": "fercanap"
-                },
-                {
-                    "Key": "Project",
-                    "Value": "aws-final-lab"
-                }
-            ],
-            "BlockPublicAccessStates": {
-                "InternetGatewayBlockMode": "off"
-            },
-            "VpcId": "vpc-0bdf0632bc629a8a6",
             "State": "available",
             "CidrBlock": "10.0.0.0/16",
             "DhcpOptionsId": "dopt-039abb22ec8aabf8b"
