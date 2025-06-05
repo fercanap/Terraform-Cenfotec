@@ -43,6 +43,7 @@ module "loadbalancer" {
 }
 
 module "autoscalingGroups" {
+<<<<<<< HEAD
   source            = "../autoscalingGroups"
   ami_id            = data.aws_ami.ubuntu.id
   subnet_ids        = [module.network.private_subnet.id]
@@ -50,4 +51,14 @@ module "autoscalingGroups" {
   key_name          = aws_key_pair.ec2_key.key_name
   lab_name          = var.lab_name
   target_group_arn  = module.loadbalancer.web_tg_arn
+=======
+  source = "../autoscalingGroups"
+
+  lab_name         = var.lab_name
+  ubuntu_ami       = data.aws_ami.ubuntu
+  private_subnet   = module.network.private_subnet
+  sg_private       = module.securityGroups.sg_private
+  ssh_key          = aws_key_pair.ec2_key
+  tgWebserver_arn  = module.loadbalancer.web_tg_arn
+>>>>>>> b07d844a (Reinicializa y agrega los archivos del lab final)
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 variable "ami_id" {
   description = "AMI ID for app instances"
   type        = string
@@ -26,4 +27,28 @@ variable "lab_name" {
 variable "target_group_arn" {
   description = "Target group ARN from ALB"
   type        = string
+=======
+variable "lab_name" {
+  type = string
+}
+
+variable "ubuntu_ami" {
+  type = any
+}
+
+variable "private_subnet" {
+  type = any
+}
+
+variable "sg_private" {
+  type = any
+}
+
+variable "ssh_key" {
+  type = any
+}
+
+variable "tgWebserver_arn" {
+  type = string
+>>>>>>> b07d844a (Reinicializa y agrega los archivos del lab final)
 }
