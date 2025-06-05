@@ -1,0 +1,1 @@
+Diagnóstico guardado en: diagnostico_output.txt
