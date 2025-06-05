@@ -98,76 +98,7 @@
 
 --- AUTO SCALING GROUPS ---
 {
-    "AutoScalingGroups": [
-        {
-            "AutoScalingGroupName": "asg-fercanap",
-            "AutoScalingGroupARN": "arn:aws:autoscaling:us-west-1:367816904393:autoScalingGroup:baef28d3-2030-4105-80aa-776e677b9438:autoScalingGroupName/asg-fercanap",
-            "LaunchTemplate": {
-                "LaunchTemplateId": "lt-0a014ad6905c887c9",
-                "LaunchTemplateName": "fercanap-lt-20250605170144642600000005",
-                "Version": "$Latest"
-            },
-            "MinSize": 0,
-            "MaxSize": 0,
-            "DesiredCapacity": 0,
-            "DefaultCooldown": 300,
-            "AvailabilityZones": [
-                "us-west-1b"
-            ],
-            "LoadBalancerNames": [],
-            "TargetGroupARNs": [
-                "arn:aws:elasticloadbalancing:us-west-1:367816904393:targetgroup/tg-fercanap/d3bf806644dc7562"
-            ],
-            "HealthCheckType": "EC2",
-            "HealthCheckGracePeriod": 300,
-            "Instances": [
-                {
-                    "InstanceId": "i-00b65bb66944ba50c",
-                    "InstanceType": "t3a.nano",
-                    "AvailabilityZone": "us-west-1b",
-                    "LifecycleState": "Terminating",
-                    "HealthStatus": "Healthy",
-                    "LaunchTemplate": {
-                        "LaunchTemplateId": "lt-0a2ef29bcbefc5bc3",
-                        "LaunchTemplateName": "fercanap-launchcfg-20250605082936992600000001",
-                        "Version": "1"
-                    },
-                    "ProtectedFromScaleIn": false
-                }
-            ],
-            "CreatedTime": "2025-06-05T08:29:44.491000+00:00",
-            "SuspendedProcesses": [],
-            "VPCZoneIdentifier": "subnet-0dfe8245bb67f88b4",
-            "EnabledMetrics": [],
-            "Status": "Delete in progress",
-            "Tags": [
-                {
-                    "ResourceId": "asg-fercanap",
-                    "ResourceType": "auto-scaling-group",
-                    "Key": "Name",
-                    "Value": "ASG-fercanap",
-                    "PropagateAtLaunch": true
-                }
-            ],
-            "TerminationPolicies": [
-                "NewestInstance"
-            ],
-            "NewInstancesProtectedFromScaleIn": false,
-            "ServiceLinkedRoleARN": "arn:aws:iam::367816904393:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling",
-            "TrafficSources": [
-                {
-                    "Identifier": "arn:aws:elasticloadbalancing:us-west-1:367816904393:targetgroup/tg-fercanap/d3bf806644dc7562",
-                    "Type": "elbv2"
-                }
-            ],
-            "AvailabilityZoneDistribution": {
-                "CapacityDistributionStrategy": "balanced-best-effort"
-            },
-            "CapacityReservationSpecification": {
-                "CapacityReservationPreference": "default"
-            }
-        }
-    ]
+    "AutoScalingGroups": []
 }
 
 --- LAUNCH TEMPLATES ---
@@ -2126,18 +2057,18 @@
             "Associations": [
                 {
                     "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-0bf3fa3993405eec5",
+                    "RouteTableAssociationId": "rtbassoc-075eae3f4cce001de",
                     "RouteTableId": "rtb-07fbad39bf234f495",
-                    "SubnetId": "subnet-0f761512f6c8bc972",
+                    "SubnetId": "subnet-0262fc486de6ceef0",
                     "AssociationState": {
                         "State": "associated"
                     }
                 },
                 {
                     "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-075eae3f4cce001de",
+                    "RouteTableAssociationId": "rtbassoc-0bf3fa3993405eec5",
                     "RouteTableId": "rtb-07fbad39bf234f495",
-                    "SubnetId": "subnet-0262fc486de6ceef0",
+                    "SubnetId": "subnet-0f761512f6c8bc972",
                     "AssociationState": {
                         "State": "associated"
                     }
@@ -2286,58 +2217,6 @@
     "NetworkInterfaces": [
         {
             "Association": {
-                "IpOwnerId": "amazon-elb",
-                "PublicDnsName": "",
-                "PublicIp": "52.52.255.205"
-            },
-            "Attachment": {
-                "AttachTime": "2025-06-05T17:03:09+00:00",
-                "AttachmentId": "eni-attach-0fd6579d0093445c7",
-                "DeleteOnTermination": false,
-                "DeviceIndex": 1,
-                "NetworkCardIndex": 0,
-                "InstanceOwnerId": "amazon-elb",
-                "Status": "attached"
-            },
-            "AvailabilityZone": "us-west-1a",
-            "Description": "ELB app/alb-fercanap/62fd309bce0afc25",
-            "Groups": [
-                {
-                    "GroupId": "sg-0cc295ec8d0a180bb",
-                    "GroupName": "public-sg"
-                }
-            ],
-            "InterfaceType": "interface",
-            "Ipv6Addresses": [],
-            "MacAddress": "06:b0:41:5f:05:c1",
-            "NetworkInterfaceId": "eni-054cd0951e35fb4e7",
-            "OwnerId": "367816904393",
-            "PublicDnsName": "",
-            "PrivateIpAddress": "10.0.1.17",
-            "PrivateIpAddresses": [
-                {
-                    "Association": {
-                        "IpOwnerId": "amazon-elb",
-                        "PublicDnsName": "",
-                        "PublicIp": "52.52.255.205"
-                    },
-                    "Primary": true,
-                    "PrivateIpAddress": "10.0.1.17"
-                }
-            ],
-            "RequesterId": "amazon-elb",
-            "RequesterManaged": true,
-            "SourceDestCheck": true,
-            "Status": "in-use",
-            "SubnetId": "subnet-0bc09d9687aabc3a6",
-            "TagSet": [],
-            "VpcId": "vpc-0bdf0632bc629a8a6",
-            "Operator": {
-                "Managed": false
-            }
-        },
-        {
-            "Association": {
                 "AllocationId": "eipalloc-0a5ba42cbe6f012d1",
                 "AssociationId": "eipassoc-0056de73b50a96376",
                 "IpOwnerId": "367816904393",
@@ -2387,45 +2266,48 @@
         },
         {
             "Association": {
-                "AllocationId": "eipalloc-0c980caed3415bfe2",
-                "AssociationId": "eipassoc-097b88df949210f67",
-                "IpOwnerId": "367816904393",
+                "IpOwnerId": "amazon-elb",
                 "PublicDnsName": "",
-                "PublicIp": "54.219.243.135"
+                "PublicIp": "52.52.255.205"
             },
             "Attachment": {
-                "AttachmentId": "ela-attach-080caf6714c82c44c",
+                "AttachTime": "2025-06-05T17:03:09+00:00",
+                "AttachmentId": "eni-attach-0fd6579d0093445c7",
                 "DeleteOnTermination": false,
                 "DeviceIndex": 1,
-                "InstanceOwnerId": "amazon-aws",
+                "NetworkCardIndex": 0,
+                "InstanceOwnerId": "amazon-elb",
                 "Status": "attached"
             },
             "AvailabilityZone": "us-west-1a",
-            "Description": "Interface for NAT Gateway nat-02a08afdec68ff97b",
-            "Groups": [],
-            "InterfaceType": "nat_gateway",
+            "Description": "ELB app/alb-fercanap/62fd309bce0afc25",
+            "Groups": [
+                {
+                    "GroupId": "sg-0cc295ec8d0a180bb",
+                    "GroupName": "public-sg"
+                }
+            ],
+            "InterfaceType": "interface",
             "Ipv6Addresses": [],
-            "MacAddress": "06:66:e0:bc:28:3b",
-            "NetworkInterfaceId": "eni-0067fdbe74351e7fb",
+            "MacAddress": "06:b0:41:5f:05:c1",
+            "NetworkInterfaceId": "eni-054cd0951e35fb4e7",
             "OwnerId": "367816904393",
             "PublicDnsName": "",
-            "PrivateIpAddress": "10.0.1.193",
+            "PrivateIpAddress": "10.0.1.17",
             "PrivateIpAddresses": [
                 {
                     "Association": {
-                        "AllocationId": "eipalloc-0c980caed3415bfe2",
-                        "AssociationId": "eipassoc-097b88df949210f67",
-                        "IpOwnerId": "367816904393",
+                        "IpOwnerId": "amazon-elb",
                         "PublicDnsName": "",
-                        "PublicIp": "54.219.243.135"
+                        "PublicIp": "52.52.255.205"
                     },
                     "Primary": true,
-                    "PrivateIpAddress": "10.0.1.193"
+                    "PrivateIpAddress": "10.0.1.17"
                 }
             ],
-            "RequesterId": "044912690849",
+            "RequesterId": "amazon-elb",
             "RequesterManaged": true,
-            "SourceDestCheck": false,
+            "SourceDestCheck": true,
             "Status": "in-use",
             "SubnetId": "subnet-0bc09d9687aabc3a6",
             "TagSet": [],
@@ -2528,6 +2410,55 @@
             "SubnetId": "subnet-0f761512f6c8bc972",
             "TagSet": [],
             "VpcId": "vpc-086e06be627cd1949",
+            "Operator": {
+                "Managed": false
+            }
+        },
+        {
+            "Association": {
+                "AllocationId": "eipalloc-0c980caed3415bfe2",
+                "AssociationId": "eipassoc-097b88df949210f67",
+                "IpOwnerId": "367816904393",
+                "PublicDnsName": "",
+                "PublicIp": "54.219.243.135"
+            },
+            "Attachment": {
+                "AttachmentId": "ela-attach-080caf6714c82c44c",
+                "DeleteOnTermination": false,
+                "DeviceIndex": 1,
+                "InstanceOwnerId": "amazon-aws",
+                "Status": "attached"
+            },
+            "AvailabilityZone": "us-west-1a",
+            "Description": "Interface for NAT Gateway nat-02a08afdec68ff97b",
+            "Groups": [],
+            "InterfaceType": "nat_gateway",
+            "Ipv6Addresses": [],
+            "MacAddress": "06:66:e0:bc:28:3b",
+            "NetworkInterfaceId": "eni-0067fdbe74351e7fb",
+            "OwnerId": "367816904393",
+            "PublicDnsName": "",
+            "PrivateIpAddress": "10.0.1.193",
+            "PrivateIpAddresses": [
+                {
+                    "Association": {
+                        "AllocationId": "eipalloc-0c980caed3415bfe2",
+                        "AssociationId": "eipassoc-097b88df949210f67",
+                        "IpOwnerId": "367816904393",
+                        "PublicDnsName": "",
+                        "PublicIp": "54.219.243.135"
+                    },
+                    "Primary": true,
+                    "PrivateIpAddress": "10.0.1.193"
+                }
+            ],
+            "RequesterId": "044912690849",
+            "RequesterManaged": true,
+            "SourceDestCheck": false,
+            "Status": "in-use",
+            "SubnetId": "subnet-0bc09d9687aabc3a6",
+            "TagSet": [],
+            "VpcId": "vpc-0bdf0632bc629a8a6",
             "Operator": {
                 "Managed": false
             }
