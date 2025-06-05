@@ -12,3 +12,8 @@ output "bastion_ssh_command" {
   description = "Comando SSH para conectarse al Bastion Host"
   value       = "ssh -i key.pem ubuntu@${module.ec2.bastion_public_ip}"
 }
+
+output "web_alb_url" {
+  description = "URL pública del Application Load Balancer"
+  value       = "http://${module.loadbalancer.alb_dns_name}"
+}
